@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SELLA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/jschr/textillate/master/assets/jquery.lettering.js"></script>
+    <script src="https://cdn.rawgit.com/jschr/textillate/master/jquery.textillate.js"></script>
+    
+  <title>Sella</title>
+  <script>
+    function talk() {
+        var user = document.getElementById("textchat").value;
+        document.getElementById("textchat").value = "";
+        document.getElementById("chatLog").innerHTML += user+"<br>";
+        if (user == "Hello Sella") {
+            document.getElementById("chatLog").innerHTML += "Hi<br>";
+            document.getElementById("textchat").placeholder = ("Say - What is an error?");
+        } 
+        else if (user == "What is an error?") {
+            document.getElementById("chatLog").innerHTML += "I do not know<br>";
+            document.getElementById("textchat").placeholder = ("Say - Are you human?");
+        }
+        else if (user == "Are you human?") {
+            document.getElementById("chatLog").innerHTML += "I am human<br>";
+            document.getElementById("textchat").placeholder = ("Say - Are you human?");
+        }
+        else {
+            document.getElementById("chatLog").innerHTML += "Sorry you wrote something wrong, but no worry now we know you are a human, try again <br>";
+        }
+    } 
+</script>
 </head>
 <body>
-    <h1>HOLA SELLA</h1>
-    <p>sii</p>
+
+<h2 class="titulo tlt">sellA</h2>
+<div class="chat">
+<input class="say" type="text" id="textchat" placeholder="Say - Hello Sella" onkeydown="if (event.keyCode == 13) {talk()}">
+<p id="chatLog"></p>
+</div>
+<div class="video">
+  <video class="esc1" src=""></video>
+</div>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/jquery.lettering.js"></script>
+<script src="js/jquery.textillate.js"></script>
+<script>$(function () {
+	$('.tlt').textillate({
+  loop: true,
+  in: { 
+    effect: 'FadeIn',    
+    delayScale: 3,
+    delay: 250,
+    shuffle: false
+  }, 
+ });
+})</script>
 </body>
 </html>

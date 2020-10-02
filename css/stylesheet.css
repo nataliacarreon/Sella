@@ -1,0 +1,33 @@
+body {
+    
+    font-family: 'Source Code Pro', monospace;
+}
+
+.titulo{
+    font-size: 5em;
+    text-align: center;
+    font-family: 'Major Mono Display', monospace;
+}
+.chat{
+    
+    text-align: left;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+input  {
+    width: 50vw;
+    height: 30px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #0a0808;
+    color: white;
+    border-color: #00000000;
+    vertical-align: middle;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    
+}
