@@ -1,12 +1,14 @@
 body {
     
     font-family: 'Source Code Pro', monospace;
+    background-color: black;
 }
 
 .titulo{
     font-size: 5em;
     text-align: center;
     font-family: 'Major Mono Display', monospace;
+    color: white;
     
 }
 .chat{
@@ -35,5 +37,35 @@ input  {
 
 #chatLog {
     margin-right: 10vw;
+    color: white;
 }
 
+.pelicula {
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+}
+
+#video {
+z-index: -10;
+}
+
+#loop1 {
+    z-index: -11;
+    }
+
+#video2 {
+        z-index: -12;
+        }
+
+#loop2 {
+        z-index: -13;
+        }
+#video3 {
+            z-index: -13;
+            }
+
+.hide{
+    display: none;
+}
