@@ -78,7 +78,7 @@
 <h2 class="titulo tlt">sellA</h2>
 <div class="chat">
 <input class="say" type="text" id="textchat" placeholder="Say - Hello Sella" onkeydown="if (event.keyCode == 13) {talk()}">
-<p id="chatLog"></p>
+<p id="chatLog" class=""></p>
 </div>
 <div class="videos">
   <video class="pelicula" id="video" src="media/01.mp4"></video>
@@ -86,6 +86,12 @@
   <video class="pelicula" id="video2" src="media/02.mp4"></video>
   <video class="pelicula" id="loop2" src="media/loop2.mp4"></video>
   <video class="pelicula" id="video3" src="media/03.mp4"></video>
+</div>
+<div class="footer">
+  <h2></h2>
+  <p class="txt">I think one of the big failures in technology today is a real failure of leadership, of, like, people coming out and having these open conversations about things that... not just what went well, but what is not perfect so that someone can come in and build something new.</p>
+  <br>
+  <p class="autor  tlt2"> - Bailey Richardson, Instagram Early Team</p>
 </div>
 <script src="js/jquery.fittext.js"></script>
 <script src="js/jquery.lettering.js"></script>
@@ -100,7 +106,19 @@
     shuffle: false
   }, 
  });
-})</script>
+})
+$(function () {
+	$('.tlt2').textillate({
+  loop: true,
+  in: { 
+    effect: 'FadeIn',    
+    delayScale: 3,
+    delay: 20,
+    shuffle: false
+  }, 
+ });
+})
+</script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://cdn.rawgit.com/jschr/textillate/master/assets/jquery.lettering.js"></script>
  <script src="https://cdn.rawgit.com/jschr/textillate/master/jquery.textillate.js"></script>
