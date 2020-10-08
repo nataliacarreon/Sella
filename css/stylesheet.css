@@ -3,6 +3,31 @@ body {
     font-family: 'Source Code Pro', monospace;
     background-color: black;
 }
+.container{
+    display: block;
+}
+.abstract{
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin: 20%;
+}
+.instrucciones {
+    position: relative;
+}
+.footer {
+    color: white;
+    margin: 50px;
+    
+}
+
+
+.txtf {
+    text-align: right;
+    margin-left: 50%;
+}
 
 .titulo{
     font-size: 5em;
@@ -38,14 +63,70 @@ input  {
 #chatLog {
     margin-right: 10vw;
     color: white;
+    height: 200px;
+    overflow: hidden;
 }
 
 .pelicula {
 position: absolute;
-top: 0;
+top: 1080px;
 left: 0;
 width: 100vw;
+width: 100%;
 }
+
+
+
+@media only screen and (max-device-width: 677px)
+and (min-device-width: 5px){
+    .footer h4 {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-size: x-small;
+        }
+    .videos{
+        height: 400px;
+    }
+    #sub {
+        color: white;
+        margin-left: 20px;
+        margin-right: 2px;
+
+    }
+    
+    #sub2 {
+        text-align: right;
+        margin-right: 20px;
+        color: white;
+    }
+    .txtf {
+        text-align: right;
+        margin-left: 20%;
+    }
+  }
+
+@media only screen and (max-device-width: 3000px)
+and (min-device-width: 678px){
+    .footer h4 {
+        margin-top: 100px;
+        }
+        .videos{
+            height: 80vh;
+        }
+        #sub {
+            color: white;
+            margin-top: 200px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 200px;
+        }
+        
+        #sub2 {
+            text-align: right;
+            margin-right: 10vw;
+            color: white;
+        }
+  }
 
 #video {
 z-index: -10;
@@ -70,13 +151,50 @@ z-index: -10;
     display: none;
 }
 
-.footer {
-    position: absolute;
-    color: white;
-    top:60vh;
-    left: 50vw;
-    right: 50px;
-}
 .autor {
     color: gray;
 }
+
+.waves {
+    position: relative;
+    top:60px;
+    left: 180px;
+    width: 5px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden;
+}
+.wave, .waves:before, .waves:after {
+    position: absolute;
+    background: white;
+    width: 5px;
+    height: 20px;
+    content: "";
+    display: block;
+    border-radius: 10%;
+    -webkit-backface-visibility: hidden;
+}
+.waves:before {
+    animation: wave-animate 3s infinite ease-out;
+}
+.waves:after {
+    opacity: 0;
+    animation: wave-animate 3s 1.5s infinite ease-out;
+}
+@keyframes wave-animate {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        transform-origin: center;
+   }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+        transform-origin: center;
+   }
+}
+
+.hideBar {
+    visibility: hidden;
+}
+

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
  
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet"> 
@@ -17,10 +18,15 @@
     
   <title>Sella</title>
   <script>
+    function hideBar() {
+          var bar = document.getElementById("bar");
+  bar.className += " hideBar";
+}
     function talk() {
         var user = document.getElementById("textchat").value;
         document.getElementById("textchat").value = "";
         document.getElementById("chatLog").innerHTML += user+"<br>";
+      
 
         if (user == "Hello Sella") {
             document.getElementById("chatLog").innerHTML += "Hi<br>";
@@ -28,7 +34,7 @@
             var video=document.getElementById('video');
             video.play();
               video.onended = function() {
-              document.getElementById("textchat").placeholder = ("Say - What is an error?");
+              document.getElementById("textchat").placeholder = ("Type exactly - What is an error?");
                video.className += " hide";
                video.pause(); 
               var loop1 = document.getElementById('loop1');
@@ -45,7 +51,7 @@
             var video2=document.getElementById('video2');
             video2.play();
               video2.onended = function() {
-                document.getElementById("textchat").placeholder = ("Say - Are you human?");
+                document.getElementById("textchat").placeholder = ("Type exactly - Are you human?");
                video2.className += " hide";
                video2.pause();
               var loop2 = document.getElementById('loop2');
@@ -60,6 +66,13 @@
             loop2.pause();
             var video3=document.getElementById('video3');
             video3.play();
+            var sub=document.getElementById('sub');
+            sub.className = " txt";
+            sub.innerHTML= "I am human <br> Do our mistakes make us human? Or is it a trace of humanity? <br> Maybe that's the beauty of a mistake <br><br> Sella What is an error?";
+            
+            var sub2=document.getElementById('sub2');
+            sub2.innerHTML= "I do not know <br><br> Maybe you were my error";
+            sub.className = " txt";
               video3.onended = function() {
                 document.getElementById("chatLog").innerHTML += "Bye<br>";
                video3.className += " hide";
@@ -75,24 +88,45 @@
 </head>
 <body>
 <div class="container">
-<h2 class="titulo tlt">sellA</h2>
+  <div class="tituloM">
+  <h2 class="titulo tlt">sellA</h2>
+</div>
+  <div class="abstract">
+    <p class="txt">In our ambition to discover the limits, Mankind has tried to program a reflection of itself, could it be to satisfy our quest for perfection?. We tend to seek perfection in machines, but the creation of perfect machinery programmed by an imperfect man breaks the laws of logic. We have forgotten that error is a wink of our humanity, a sign of freedom.
+    </p>
+      <br>
+      <p class="autor  tlt2">Perfection is a polished collection of mistakes. - Mario Benedetti</p>
+  </div>
+  <div class="instrucciones">
+    
+  </div>
+  <div class="sella">
+
 <div class="chat">
-<input class="say" type="text" id="textchat" placeholder="Say - Hello Sella" onkeydown="if (event.keyCode == 13) {talk()}">
+  <div class="waves" id="bar"></div>
+<input class="say" type="text" id="textchat" placeholder="Type exactly - Hello Sella" onkeydown="if (event.keyCode == 13) {talk()}" oninput="hideBar()">
 <p id="chatLog" class=""></p>
 </div>
 <div class="videos">
-  <video class="pelicula" id="video" src="media/01.mp4"></video>
-  <video class="pelicula" id="loop1" src="media/loop1.mp4"></video>
-  <video class="pelicula" id="video2" src="media/02.mp4"></video>
-  <video class="pelicula" id="loop2" src="media/loop2.mp4"></video>
-  <video class="pelicula" id="video3" src="media/03.mp4"></video>
+  <video class="pelicula" id="video" src="media/wm01.webm"></video>
+  <video class="pelicula" id="loop1" src="media/loop1.webm"></video>
+  <video class="pelicula" id="video2" src="media/02.webm"></video>
+  <video class="pelicula" id="loop2" src="media/loop2.webm"></video>
+  <video class="pelicula" id="video3" src="media/03.webm"></video>
+  <div class="sub"><p id="sub">
+  </p><p id="sub2" class="subtitulos2">
+  </p></div>
+</div>
+
 </div>
 <div class="footer">
-  <h2></h2>
-  <p class="txt">I think one of the big failures in technology today is a real failure of leadership, of, like, people coming out and having these open conversations about things that... not just what went well, but what is not perfect so that someone can come in and build something new.</p>
+  <h4>Desig by Natalia Carreón</h4>
+  <p class="txtf">I think one of the big failures in technology today is a real failure of leadership, of, like, people coming out and having these open conversations about things that... not just what went well, but what is not perfect so that someone can come in and build something new.</p>
   <br>
-  <p class="autor  tlt2"> - Bailey Richardson, Instagram Early Team</p>
+  <p class="autor  tlt2 txtf"> - Bailey Richardson, Instagram Early Team</p>
 </div>
+</div>
+
 <script src="js/jquery.fittext.js"></script>
 <script src="js/jquery.lettering.js"></script>
 <script src="js/jquery.textillate.js"></script>
